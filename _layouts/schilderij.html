@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="portfolio-page">
+  <div class="portfolio-item">
+    <a href="{{ page.image_url }}" rel="prettyPhoto"><img src="{{ page.image_url }}" style="display: block; margin: 0 auto;" title="{{ page.title }}" alt="{{ page.short }}"></a>
+    <div class="portfolio-item-content">
+      <h1>{% if page.sold == true %}[VERKOCHT] {% endif %}{{ page.title }}</h1>
+
+      <p class="lead">{{ page.short }}</p>
+      <p>{{ page.description }}</p>
+      
+      <p class="muted">{{ page.dimensions }}, {{ page.price }}
+        {% if page.sold != true %}
+          [<a href="mailto:?subject=Ik wil graag {{ page.title }} bestellen">bestellen</a>] 
+        {% endif %}
+      </p>
+      <p><a href="{{site.baseurl}}portfolio" title="Portfolio">&laquo; portfolio</a></p>
+
+    </div>
+  </div>
+</div>

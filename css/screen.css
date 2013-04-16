@@ -1,0 +1,80 @@
+body {
+  padding-top: 20px;
+  background-color: #D9DFE2;
+}
+
+.portfolio-item h2 {
+  font-size: 1.5em;
+  line-height: 20px;
+  margin:0;
+}
+
+.portfolio-item, .block {
+  box-shadow: 0px 0px 10px #CCCCCC;
+  background-color: #FEFEFE;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  min-height: 200px;
+}
+@media (min-width: 767px) {
+  .portfolio-page .portfolio-item {
+    width: 725px;
+  }
+}
+
+.portfolio-item .portfolio-item-content {
+  min-height: 75px;
+}
+.portfolio-item-content, .block-content {
+  padding: 25px 30px 5px 30px;
+  min-height: 150px;
+}
+
+#home-blocks .block {
+  min-height:160px;
+}
+
+#portret {
+  margin: 0 auto;
+  max-width: 250px;
+  display:block;
+  width: 100%;
+  height:auto;
+}
+
+/** Bootstrap tweaks **/
+.carousel-caption {
+  color: #FFF;
+}
+
+.img-crop,
+.img-crop img{
+	width: 100%; /* gotta be responsive these days */
+}
+.img-crop{
+	overflow: hidden;
+
+	/* remove white-space for inline-block elements */
+	letter-spacing: -0.31em; /* webkit */
+	*letter-spacing: normal; /* reset IE < 8 */
+	word-spacing: -0.43em; /* IE < 8 && gecko */
+}
+.img-crop:before,
+.img-crop img{
+	/* vertically center the image */
+	display: inline-block;
+	vertical-align: middle;
+}
+.img-crop:before{
+	/* pseudo element to vertically align image to */
+	content: "";
+
+	/* Magic Number */
+	/* Set this to your desired height(to width) ratio */
+	padding-top: 75%; /* % of original image width */ 
+}
+.img-crop img{
+	/* removes(sorta) image from the flow */
+	padding-left: 100%;
+	margin: -999em -100%;
+}

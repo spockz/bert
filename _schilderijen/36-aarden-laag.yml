@@ -1,0 +1,10 @@
+layout: schilderij
+published: true
+title:     Aarden laag
+short:     Korte beschrijving van schilderij 1
+price:     €500000
+dimensions: 70x70cm
+description:
+  Beschrijving van schilderij 1
+
+image_url: /schilderijen/schilderij-36.jpg

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }} - Bert Paulis Kunst</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="{{site.baseurl}}css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- <link href="{{site.baseurl}}css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"> -->
+    <link href="{{site.baseurl}}css/prettyPhoto.css" rel="stylesheet" media="screen">
+    <link href="{{site.baseurl}}css/screen.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="{{site.baseurl#}}">Bert Paulis</a>
+          <ul class="nav">
+            {% for link in site.navigation %}
+              {% assign current = nil %}
+              {% if page.url == link.url %}
+                {% assign current = 'active' %}
+              {% endif %}
+              <li class="{{ current }}">
+                <a href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}          </ul>
+        </div>
+      </div>
+      
+      {{ content }}
+      
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="{{site.baseurl}}js/bootstrap.min.js"></script>
+    <script src="{{site.baseurl}}js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("a[rel^='prettyPhoto']").prettyPhoto();
+      });
+    </script>
+  </body>
+</html>

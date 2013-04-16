@@ -1,0 +1,15 @@
+auto: true
+
+baseurl: /
+
+navigation:
+- text: Home
+  url: 
+- text: Biografie
+  url: biografie.html
+- text: Werkwijze
+  url: werkwijze.html
+- text: Schilderijen
+  url: portfolio/
+- text: Contact
+  url: contact.html
