@@ -3,13 +3,11 @@ auto: true
 baseurl: /
 
 navigation:
-- text: Home
-  url: 
 - text: Biografie
-  url: biografie.html
+  url: /biografie.html
 - text: Werkwijze
-  url: werkwijze.html
+  url: /werkwijze.html
 - text: Schilderijen
-  url: portfolio/
+  url: /portfolio/index.html
 - text: Contact
-  url: contact.html
+  url: /contact.html

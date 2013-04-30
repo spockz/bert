@@ -3,7 +3,8 @@ layout: pagina
 title: "De werkwijze van Bert Paulis"
 permalink: /werkwijze.html
 ---
-# Werkwijze
+
+## Werkwijze
 
 Acrylverf is uit praktische overwegingen het middel voor Bert om mee te werken.
 Op het witte doek begint hij soms met een vorm, een andere keer is kleur de

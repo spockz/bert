@@ -6,26 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="{{site.baseurl}}css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <!-- <link href="{{site.baseurl}}css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"> -->
+    <link href="{{site.baseurl}}css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link href="{{site.baseurl}}css/prettyPhoto.css" rel="stylesheet" media="screen">
     <link href="{{site.baseurl}}css/screen.css" rel="stylesheet" media="screen">
   </head>
-  <body>
+  <body class="dark">
     <div class="container">
-
-      <div class="navbar">
+      
+      <div class="navbar navbar-inverse">
         <div class="navbar-inner">
-          <a class="brand" href="{{site.baseurl#}}">Bert Paulis</a>
-          <ul class="nav">
-            {% for link in site.navigation %}
-              {% assign current = nil %}
-              {% if page.url == link.url %}
-                {% assign current = 'active' %}
-              {% endif %}
-              <li class="{{ current }}">
-                <a href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
-              </li>
-            {% endfor %}          </ul>
+          <div class="container">
+
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+
+            <a class="brand" href="{{site.baseurl#}}">Bert Paulis</a>
+
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                {% for link in site.navigation %}
+                  {% assign current = nil %}
+                  {% if page.url == link.url %}
+                    {% assign current = 'active' %}
+                  {% endif %}
+                  <li class="{{ current }}">
+                    <a href="{{ link.url }}">{{ link.text }}</a>
+                  </li>
+                {% endfor %}          </ul>
+              <!---<ul class="nav pull-right">
+                <a class="btn" id="themetoggle"><i class="icon icon-random"></i></a>
+              </ul>-->
+            </div>
+          </div>
         </div>
       </div>
       
@@ -40,6 +56,12 @@
       $(document).ready(function(){
         $("a[rel^='prettyPhoto']").prettyPhoto();
       });
+      
+      var $body = $('body');
+      $('#themetoggle').click(function() {
+        $body.toggleClass('light');
+        $body.toggleClass('dark');
+      })
     </script>
   </body>
-</html>
+</html

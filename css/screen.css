@@ -1,6 +1,27 @@
+@font-face
+{
+font-family: GoudyStout;
+src: url('goudystout.ttf'),
+     url('goudystout.eot'); /* IE9 */
+}
+
 body {
   padding-top: 20px;
-  background-color: #D9DFE2;
+/*  background-color: rgb(166,154,173);*/
+  background-color: rgb(116,104,123);
+/*  color: #FFFFE1;*/
+  color: #000;
+}
+
+
+.carousel-inner img {
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  font-family: GoudyStout;
+  font-weight: normal;
 }
 
 .portfolio-item h2 {
@@ -9,9 +30,19 @@ body {
   margin:0;
 }
 
+a {
+  color: #B8B89A;
+}
+
+.muted {
+  color: #CCB5C2;
+}
+
+p {
+  text-align:justify;
+}
+
 .portfolio-item, .block {
-  box-shadow: 0px 0px 10px #CCCCCC;
-  background-color: #FEFEFE;
   margin: 0 auto;
   margin-bottom: 20px;
   min-height: 200px;
@@ -77,4 +108,26 @@ body {
 	/* removes(sorta) image from the flow */
 	padding-left: 100%;
 	margin: -999em -100%;
+}
+
+body.light {
+  
+  background: #333;
+}
+
+body.light {
+  /*color: #333;*/
+}
+
+body.light .muted {
+  color: #999;
+}
+
+body.light a {
+  color: #08c;
+}
+
+body.light .portfolio-item, body.light .block {
+  box-shadow: 0px 0px 10px #CCCCCC;
+  background-color: #FEFEFE;
 }

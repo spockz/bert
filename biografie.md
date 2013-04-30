@@ -4,10 +4,11 @@ title: "Bert Paulis"
 permalink: /biografie.html
 ---
 
-# Biografie
 
-<p class="lead">Het hele leven van Bert Paulis staat in het teken van verf. In zijn beroep als
-huisschilder was verf buiten esthetiek en kleur vooral een beschermende factor.</p>
+## Biografie
+
+Het hele leven van Bert Paulis staat in het teken van verf. In zijn beroep als
+huisschilder was verf buiten esthetiek en kleur vooral een beschermende factor.
 
 In zijn vrije tijd tekende en schilderde hij geregeld. Maar zijn liefde voor de
 kunst is eigenlijk ontstaan omdat hij in een kunstenaarsflat aan de
