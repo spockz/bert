@@ -10,7 +10,7 @@ Acrylverf is uit praktische overwegingen het middel voor Bert om mee te werken.
 Op het witte doek begint hij soms met een vorm, een andere keer is kleur de
 basis. Eigenlijk is zijn werk te omschrijven als een omgekeerd kleurboek. Waar
 het bij een kleurboek gaat om het inkleuren van een tekening, schildert Bert
-eerst kleurvlakken die hij later omlijnd.
+eerst kleurvlakken die hij later omlijnt.
 
 Hij zoekt in de kleuren zijn tekening waardoor ieder kleurvlak een eigen
 betekenis krijgt in het schilderij. Vaak laat hij zich, tot op zekere hoogte,

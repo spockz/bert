@@ -8,9 +8,9 @@ src: url('goudystout.ttf'),
 body {
   padding-top: 20px;
 /*  background-color: rgb(166,154,173);*/
-  background-color: rgb(116,104,123);
-/*  color: #FFFFE1;*/
-  color: #000;
+  /*background-color: rgb(116,104,123);*/
+  /*color: #FFFFE1;*/
+  /*color: #000;*/
 }
 
 
@@ -28,14 +28,6 @@ body {
   font-size: 1.5em;
   line-height: 20px;
   margin:0;
-}
-
-a {
-  color: #B8B89A;
-}
-
-.muted {
-  color: #CCB5C2;
 }
 
 p {
@@ -88,7 +80,7 @@ p {
 	/* remove white-space for inline-block elements */
 	letter-spacing: -0.31em; /* webkit */
 	*letter-spacing: normal; /* reset IE < 8 */
-	word-spacing: -0.43em; /* IE < 8 && gecko */
+	/*word-spacing: -0.43em; /* IE < 8 && gecko */
 }
 .img-crop:before,
 .img-crop img{
@@ -110,24 +102,37 @@ p {
 	margin: -999em -100%;
 }
 
-body.light {
-  
-  background: #333;
+.header {
+  color: #000;
 }
 
-body.light {
-  /*color: #333;*/
+.header .heading {
+  margin: 0;
+  padding: 8px;
+  color: #333;
 }
 
-body.light .muted {
-  color: #999;
+.content {
+  padding-top: 20px;
 }
 
-body.light a {
-  color: #08c;
+.well, .portfolio-item-content, .block-content {
+/*  background-color: rgb(49,49,49);*/
+  color: #333;
+  border:0;
 }
 
-body.light .portfolio-item, body.light .block {
+.portfolio-item {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-collapse.collapse {
+width: 400px;
+display: block;
+margin: 0 auto;
+}
+
+.portfolio-item, .block {
   box-shadow: 0px 0px 10px #CCCCCC;
   background-color: #FEFEFE;
 }

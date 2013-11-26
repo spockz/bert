@@ -11,39 +11,45 @@
     <link href="{{site.baseurl}}css/screen.css" rel="stylesheet" media="screen">
   </head>
   <body class="dark">
-    <div class="container">
+    <div class="header">
+      <a class="brand" href="{{site.baseurl#}}"><h1 class="heading">Bert Paulis</h1></a>
+    </div>
+    
       
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <div class="container">
+    
+    <div class="container content">
 
-            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
+      <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
 
-            <a class="brand" href="{{site.baseurl#}}">Bert Paulis</a>
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
 
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                {% for link in site.navigation %}
-                  {% assign current = nil %}
-                  {% if page.url == link.url %}
-                    {% assign current = 'active' %}
-                  {% endif %}
-                  <li class="{{ current }}">
-                    <a href="{{ link.url }}">{{ link.text }}</a>
-                  </li>
-                {% endfor %}          </ul>
-              <!---<ul class="nav pull-right">
-                <a class="btn" id="themetoggle"><i class="icon icon-random"></i></a>
-              </ul>-->
-            </div>
+          
+
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              {% for link in site.navigation %}
+                {% assign current = nil %}
+                {% if page.url == link.url %}
+                  {% assign current = 'active' %}
+                {% endif %}
+                <li class="{{ current }}">
+                  <a href="{{ link.url }}">{{ link.text }}</a>
+                </li>
+              {% endfor %}          </ul>
+            <!---<ul class="nav pull-right">
+              <a class="btn" id="themetoggle"><i class="icon icon-random"></i></a>
+            </ul>-->
           </div>
         </div>
       </div>
+    </div>
       
       {{ content }}
       
