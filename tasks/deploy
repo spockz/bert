@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+jekyll --no-auto && rsync -avz --delete _site/ vps-downloads:/var/www/bert
