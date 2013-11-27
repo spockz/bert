@@ -15,8 +15,8 @@ title: Schilderijen
               <a href="{{ project[0] }}"><img src="{{site.baseurl}}thumbs{{ project[1].image_url }}"/></a>
             </div>
             <div class="portfolio-item-content">
-              <h2>{% if project[1].sold == true %}[VERKOCHT] {% endif %}{{ project[1].title }} {{ forloop.index0.modulo(3) }} <a href="{{ project[0] }}">&raquo;</a></h2>
-              <p class="muted">{{ project[1].short }} - {{ project[1].dimensions }}</p>
+              <h2>{{ project[1].title }} {{ forloop.index0.modulo(3) }} <a href="{{ project[0] }}">&raquo;</a></h2>
+              <p class="muted">{{ project[1].short }} - {{ project[1].dimensions }}{% if project[1].sold == true %} [VERKOCHT]{% endif %}</p>
             </div>
           </div>
         </div>
