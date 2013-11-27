@@ -12,17 +12,18 @@ module Jekyll
     end
 
     def get_projects(site)
-      {}.tap do |projects|
+      res = {}.tap do |projects|
         Dir['_schilderijen/*.yml'].sort_by{|s| File.basename(s, '.yml').to_i}.each do |path|
           name   = File.basename(path, '.yml')
           config = YAML.load(File.read(File.join(@base, path)))
-          series = (config.key? "series") ? config["series"] : ['Unsorted']
+          series = (config.key? "series") ? config["series"] : ['Ongesorteerd']
           series.each do |serie|
             projects[serie] = {} if !projects.key? serie
             projects[serie][name] = config if config['published']
           end
         end
       end
+      res.sort_by {|k,v| k}
     end
   end
 
