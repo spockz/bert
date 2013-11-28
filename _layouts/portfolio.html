@@ -2,26 +2,28 @@
 layout: default
 title: Schilderijen
 ---
-
-  <div class="row-fluid">
+  <div class="portfolio">
+  <div class="row">
   {% for serie in page.projects | sort %}
   <!-- <h1>{{serie[0]}}</h1> -->
     
     {% for project in serie[1] %}
       {% if project[1].image_url %}
-        <div class="span4">
-          <div class="portfolio-item">
-            <div class="img-crop">
-              <a href="{{ project[0] }}"><img src="{{site.baseurl}}thumbs{{ project[1].image_url }}"/></a>
+        <div class="col-sm-4">
+          <div class="panel panel-default portfolio-item">
+            <div class="panel-body">
+              <div class="img-crop">
+                <a href="{{ project[0] }}"><img src="{{site.baseurl}}thumbs{{ project[1].image_url }}" class="panel-body"/></a>
+              </div>
             </div>
-            <div class="portfolio-item-content">
+            <div class="panel-footer">
               <h2>{{ project[1].title }} {{ forloop.index0.modulo(3) }} <a href="{{ project[0] }}">&raquo;</a></h2>
               <p class="muted">{{ project[1].short }} - {{ project[1].dimensions }}{% if project[1].sold == true %} [VERKOCHT]{% endif %}</p>
             </div>
           </div>
         </div>
         
-      {% cycle ('close_row'+{{serie[0]}}): '', '', '</div><div class="row-fluid">' %}
+      {% cycle ('close_row'+{{serie[0]}}): '', '', '</div><div class="row">' %}
 
       {% endif %}
 
@@ -32,3 +34,4 @@ title: Schilderijen
   <div id="pagination">
   {{ paginate | default_pagination }}
   </div>
+</div>

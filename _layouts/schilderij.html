@@ -3,9 +3,11 @@ layout: default
 ---
 
 <div class="portfolio-page">
-  <div class="portfolio-item">
-    <a href="{{ page.image_url }}" rel="prettyPhoto"><img src="{{ page.image_url }}" style="display: block; margin: 0 auto;" title="{{ page.title }}" alt="{{ page.short }}"></a>
-    <div class="portfolio-item-content">
+  <div class="panel panel-default portfolio-item">
+    <div class="panel-body">
+      <a href="{{ page.image_url }}" rel="prettyPhoto"><img class="img-responsive" src="{{ page.image_url }}" style="display: block; margin: 0 auto;" title="{{ page.title }}" alt="{{ page.short }}"></a>
+    </div>
+    <div class="panel-footer">
       <h1>{% if page.sold == true %}[VERKOCHT] {% endif %}{{ page.title }}</h1>
 
       <p class="lead">{{ page.short }}</p>

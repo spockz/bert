@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
     <title>{{ page.title }} - Bert Paulis Kunst</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="{{site.baseurl}}css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="{{site.baseurl}}css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="{{site.baseurl}}css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
     <link href="{{site.baseurl}}css/prettyPhoto.css" rel="stylesheet" media="screen">
     <link href="{{site.baseurl}}css/screen.css" rel="stylesheet" media="screen">
   </head>
@@ -19,37 +19,35 @@
     
     <div class="container content">
 
-      <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
 
-          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <div class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
-
-          
-
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              {% for link in site.navigation %}
-                {% assign current = nil %}
-                {% if page.url == link.url %}
-                  {% assign current = 'active' %}
-                {% endif %}
-                <li class="{{ current }}">
-                  <a href="{{ link.url }}">{{ link.text }}</a>
-                </li>
-              {% endfor %}          </ul>
-            <!---<ul class="nav pull-right">
-              <a class="btn" id="themetoggle"><i class="icon icon-random"></i></a>
-            </ul>-->
-          </div>
+          </button>
         </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            {% for link in site.navigation %}
+              {% assign current = nil %}
+              {% if page.url == link.url %}
+                {% assign current = 'active' %}
+              {% endif %}
+              <li class="{{ current }}">
+                <a href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %} 
+          </ul>
+          
+        </div><!-- /.navbar-collapse -->
       </div>
-    </div>
+
       
       {{ content }}
       
