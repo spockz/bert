@@ -6,7 +6,7 @@ permalink: /contact.html
 
 # Contact
 
-U kunt in contact treden met Bert Paulis per telefoon of per e-mail.
+U kunt in contact treden met Bert Paulis per telefoon of per e-mail of laat een berichtje achter in het [gastenboek](/gastenboek.html).
 
 Telefoon: 0756213699
 
