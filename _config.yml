@@ -9,5 +9,7 @@ navigation:
   url: /werkwijze.html
 - text: Schilderijen
   url: /portfolio/index.html
+- text: Gastenboek
+  url: /gastenboek.html
 - text: Contact
   url: /contact.html
