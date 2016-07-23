@@ -74,9 +74,11 @@ p {
 .panel *,
 .img-crop, .img-crop:before, .img-crop:after,
 .img-crop a, .img-crop a:before, .img-crop a:after, 
-.img-crop img,.img-crop img:before ,.img-crop img:after
-.panel, .panel:before ,.panel:after
+.img-crop img,.img-crop img:before, .img-crop img:after,
+.panel, .panel:before, .panel:after
 {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
